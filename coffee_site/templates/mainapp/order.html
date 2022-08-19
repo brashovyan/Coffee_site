@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href= "{% static 'css/order.css' %}" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300&family=Montserrat:ital,wght@0,100;0,200;0,300;0,600;1,900&family=Oswald:wght@500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header class="header">
+        <a class="header_logo" href="/">Coffee house</a>
+    </header>
+
+    <main>
+
+        <div class="name_input">
+            <input class="input" name="surname" type="text" placeholder="Введите фамилию">
+            <input class="input" name="firstname" type="text" placeholder="Введите имя">
+        </div>
+
+        <div class="for_chb">
+            <div class="checkboxes">
+                {% for product in products %}
+                    <div class="product">
+                        <div>
+                            <input class="checkbox" type="checkbox" name="{{product.id}}" value="{{product.price}}" id="{{product.id}}">
+                            <label for="{{product.id}}" class="label">{{product.title}} - {{product.price}} р.</label>
+                        </div>
+                        <input class="quantity" type="number" name="{{product.id}}" value="0" content="0" min="0" step="1">
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <p class="result_logo">Итого: <span class="result">0</span> р.</p>
+
+        <div class="div_btn">
+            <button class="btn" type="submit" onclick="btnClick()">Оформить заказ</button>
+        </div>
+
+
+        <footer class="footer">
+            <h3 class="footer_logo">© COPYRIGHT 2021</h3>
+        </footer>
+
+
+    </main>
+
+    <script src="{% static 'js/order.js' %}"></script>
+</body>
+</html>

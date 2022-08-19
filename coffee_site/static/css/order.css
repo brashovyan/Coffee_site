@@ -1,0 +1,145 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Exo 2', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Oswald', sans-serif;
+}
+
+.header {
+    width: 100%;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_logo {
+    margin: 20px;
+    text-decoration: none;
+    color: #000000;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 36px;
+}
+
+.header_logo:hover {
+    color: #525252;
+}
+
+.name_input {
+    background-color: #817070;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.input {
+    margin: 86px 32px 84px 32px;
+    background: #817070;
+    border: 3px solid #FFFFFF;
+    width: 300px;
+    height: 55px;
+    color: #FFFFFF;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.input::placeholder {
+    text-align: center;
+    font-weight: 300;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+.checkboxes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 800px;
+}
+
+.for_chb {
+    background-color: #817070;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product {
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px;
+}
+
+.quantity {
+    width: 130px;
+    height: 55px;
+    background: #817070;
+    border: 3px solid #FFFFFF;
+    font-weight: 300;
+    font-size: 20px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.label {
+    font-weight: 300;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+.checkbox {
+    width: 21px;
+    height: 23px;
+}
+
+.result_logo {
+    text-align: center;
+    font-weight: 300;
+    font-size: 20px;
+    color: #FFFFFF;
+    background-color: #817070;
+    padding-top: 35px;
+}
+
+.div_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #817070;
+    padding-top: 26px;
+    padding-bottom: 35px;
+}
+
+.btn {
+    width: 200px;
+    height: 65px;
+    background-color: #FFFFFF;
+    border: none;
+    font-weight: 500;
+    font-size: 20px;
+    color: #817070;
+    text-transform: uppercase;
+}
+
+.btn:hover{
+    cursor: pointer;
+}
+
+.footer_logo {
+    text-align: center;
+    font-weight: 300;
+    font-size: 20px;
+    color: #000000;
+    margin-top: 29px;
+    margin-bottom: 14px;
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href= "{% static 'css/coffee_site.css' %}" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300&family=Montserrat:ital,wght@0,100;0,200;0,300;0,600;1,900&family=Oswald:wght@500&display=swap" rel="stylesheet">
+
+    <title>Coffee House</title>
+</head>
+<body>
+    <header class="header">
+        <a href="/" class="logo">Coffee house</a>
+        <div class="header_right">
+            <a href="/order" class="header_menu">Заказать</a>
+            <a href="/" class="header_menu">Home</a>
+            <a href="#story" class="header_menu">Story</a>
+            <a href="#blog" class="header_menu">Blog</a>
+            <a href="#subscribe" class="header_menu">Subscribe</a>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="coffee_img">
+            <h1 class="img_text">Take your time</h1>
+            <div class="line">
+              
+            </div>
+        </div>
+        <div class="story">
+            <p><a name="story"></a></p> <!-- Навигация по странице -->
+            <h2 class="story_logo">Story</h2>
+            <div class="story_content">
+                <div class="story_img_div">
+                    <img src="https://source.unsplash.com/X4RJG4aNi8o/1920x1080" class="story_img" alt="Coffee">
+                </div>
+                <div class="story_text_div">
+                    <p class="story_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius
+                        eget arcu quis cursus. Nunc id tortor imperdiet, vestibulum orci sed, gravida orci. Cras
+                        a enim ac elit eleifend euismod. Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+                        per inceptos himenaeos. Praesent mattis ultrices est, congue ullamcorper erat bibendum pulvinar.
+                            In accumsan dapibus accumsan. Maecenas semper est ut nunc feugiat, vel ultrices ligula commodo. 
+                            Donec eget pulvinar nunc, eget pharetra risus.
+                            Eget arcu quis cursus. Nunc id tortor imperdiet, vestibulum orci sed, gravida orci. Cras
+                        a enim ac elit eleifend euismod. Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+                        per inceptos himenaeos. Praesent mattis ultrices est, congue ullamcorper erat bibendum pulvinar.
+                            In accumsan dapibus accumsan. Maecenas semper est ut nunc feugiat, vel ultrices ligula commodo. 
+                            Donec eget pulvinar nunc, eget pharetra risus.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="blog">
+            <p><a name="blog"></a></p>
+            <h2 class="blog_logo">Blog</h2>
+            <div class="blocks">
+                <div class="block1">
+                    <a href="#" class="block_link">
+                        <h3 class="block_logo">Daily Coffee News</h3>
+                        <img src="https://source.unsplash.com/CSQQ6_T0sks/1920x1080" alt="News" class="block_img">
+                        <p class="block_text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Aenean varius eget arcu quis cursus. Nunc id tortor imperdiet, 
+                            vestibulum orci sed, gravida orci. Cras a enim ac elit eleifend euismod.
+                        </p>
+                    </a>
+                </div>
+    
+                <div class="block2">
+                    <a href="#" class="block_link">
+                        <h3 class="block_logo">Dutch Coffee Chains </h3>
+                        <img src="https://source.unsplash.com/TYIzeCiZ_60/1920x1080" alt="News" class="block_img">
+                        <p class="block_text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Aenean varius eget arcu quis cursus. Nunc id tortor imperdiet,
+                            vestibulum orci sed, gravida orci. Cras a enim ac elit eleifend euismod.
+                        </p>
+                    </a>
+                </div>
+    
+                <div class="block3">
+                    <a href="#" class="block_link">
+                        <h3 class="block_logo">Start Up In Minneapolis</h3>
+                        <img src="https://source.unsplash.com/9rTEwV_G0Do/1920x1080" alt="News" class="block_img">
+                        <p class="block_text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius eget arcu quis cursus.
+                            Nunc id tortor imperdiet, vestibulum orci sed, gravida orci.
+                            Cras a enim ac elit eleifend euismod.
+                        </p>
+                    </a>
+                </div>
+            </div>    
+        </div>
+        
+        <form method="post" class="subscribe">
+            {% csrf_token %}
+            <p><a name="subscribe"></a></p>
+            <h2 class="subscribe_logo">Subscribe</h2>
+            <input type="email" placeholder="enter your email" name="email" class="subscribe_email">
+            <button class="subcribe_btn" type="submit">SUBMIT</button>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <h3 class="footer_logo">© COPYRIGHT 2021</h3>
+    </footer>
+</body>
+</html>

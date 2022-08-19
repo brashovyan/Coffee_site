@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href= "{% static 'css/order.css' %}" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300&family=Montserrat:ital,wght@0,100;0,200;0,300;0,600;1,900&family=Oswald:wght@500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header class="header">
+        <a class="header_logo" href="/">Coffee house</a>
+    </header>
+
+    <main>
+
+        <div class="name_input">
+            <input class="input" name="surname" type="text" placeholder="Введите фамилию">
+            <input class="input" name="firstname" type="text" placeholder="Введите имя">
+        </div>
+
+        <div class="for_chb">
+            <div class="checkboxes">
+                <div class="product">
+                    <div>
+                        <input class="checkbox" type="checkbox" name="product1" value="80" id="product1">
+                        <label for="product1" class="label">Эспрессо 80р.</label>
+                    </div>
+                    <input class="quantity" type="number" name="product1_q" value="0" content="0" min="0" step="1">
+                </div>
+
+                <div class="product">
+                    <div>
+                    <input class="checkbox" type="checkbox" name="product2" value="110" id="product2">
+                    <label for="product2" class="label">Латте 110р.</label>
+                        </div>
+                    <input class="quantity" type="number" name="product2_q" value="0" content="0">
+                </div>
+
+                <div class="product">
+                    <div>
+                        <input class="checkbox" type="checkbox" name="product3" value="120" id="product3">
+                    <label for="product3" class="label">Капучино 120р.</label>
+                    </div>
+
+                    <input class="quantity" type="number" name="product3_q" value="0" content="0">
+                </div>
+
+                <div class="product">
+                    <div>
+                    <input class="checkbox" type="checkbox" name="product4" value="90" id="product4">
+                    <label for="product4" class="label">Американо 90р.</label>
+                        </div>
+                    <input class="quantity" type="number" name="product4_q" value="0" content="0">
+                </div>
+
+                <div class="product">
+                    <div>
+                    <input class="checkbox" type="checkbox" name="product5" value="80" id="product5">
+                    <label for="product5" class="label">Шоколадный кекс 80р.</label>
+                        </div>
+                    <input class="quantity" type="number" name="product5_q" value="0" content="0">
+                </div>
+
+                <div class="product">
+                    <div>
+
+
+                    <input class="checkbox" type="checkbox" name="product6" value="90" id="product6">
+                    <label for="product6" class="label">Черничный кекс 90р.</label>
+                        </div>
+                    <input class="quantity" type="number" name="product6_q" value="0" content="0">
+                </div>
+
+                <div class="product">
+                    <div>
+                    <input class="checkbox" type="checkbox" name="product7" value="100" id="product7">
+                    <label for="product7" class="label">Яблочный пирог 100р.</label>
+                        </div>
+                    <input class="quantity" type="number" name="product7_q" value="0" content="0">
+                </div>
+
+                <div class="product">
+                    <div>
+                    <input class="checkbox" type="checkbox" name="product8" value="100" id="product8">
+                    <label for="product8" class="label">Яблочный пирог 100р.</label>
+                        </div>
+                    <input class="quantity" type="number" name="product8_q" value="0" content="0">
+                </div>
+
+            </div>
+        </div>
+
+        <p class="result_logo">Итого: <span class="result">0</span> р.</p>
+
+        <div class="div_btn">
+            <button class="btn" type="submit" onclick="btnClick()">Оформить заказ</button>
+        </div>
+
+
+        <footer class="footer">
+            <h3 class="footer_logo">© COPYRIGHT 2021</h3>
+        </footer>
+
+
+    </main>
+
+    <script src="{% static 'js/order.js' %}"></script>
+</body>
+</html>
