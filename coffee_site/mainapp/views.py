@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
 from .models import Order, Product
 
 
@@ -17,11 +17,24 @@ def order(request):
     return render(request, 'mainapp/order.html', {"products": products})
 
 
-def success(request, fullName, content, total):
-    print(fullName)
-    print(content)
-    print(total)
-    Order.objects.create(name=fullName, content=content, cost=total)
+def aja(request):
+    fullName = request.GET.get('fullName')
+    content = request.GET.get('content')
+    total = request.GET.get('total')
+    if(fullName != None and content != None and total != None):
+        print(fullName)
+        print(content)
+        print(total)
+        loh = "ты лох!"
+        Order.objects.create(name=fullName, content=content, cost=total)
+        data = {
+            "loh": loh,
+            # Data that you want to send to javascript function
+        }
+        return JsonResponse(data)
+    else:
+        return HttpResponseRedirect("/")
 
-    return HttpResponseRedirect("/")
+
+
 

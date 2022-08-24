@@ -46,7 +46,7 @@ product.forEach(element => { element.addEventListener("change", function()
             if(pr.children[0].children[0].checked)
             {
                 price = parseInt(pr.children[0].children[0].value) * parseInt(pr.children[1].value);
-                content.push(`${pr.children[0].children[1].textContent} ${pr.children[1].value} шт.`)
+                content.push(`${pr.children[0].children[1].textContent} ${pr.children[1].value} шт.\n`)
                 total += price;
             }
         }
@@ -73,7 +73,27 @@ function btnClick()
         let fullName = `${surname.value} ${firstname.value}`;
         if(confirm(`Заказчик: ${fullName}\nИтого: ${total} руб.`))
         {
-            window.location.href = `/success/${fullName}/${content}/${total}`;
+            //window.location.href = `/success/${fullName}/${content}/${total}`;
+            $.ajax({
+                type: "GET",
+                url: '/aja',
+                data: {
+                    "fullName": fullName,
+                    "content": String(content),
+                    "total": total,
+                },
+                dataType: "json",
+                success: function (data) {
+                    // any process in data
+                    console.log(data.loh)
+                    alert("Заказ успешно оформлен! Вы будете перемещены на главную страницу.")
+                    window.location.href = `/`;
+                },
+                failure: function () {
+                    alert("Во время обработки заказа произошла ошибка!");
+                }
+
+            });
         }
     }
     else

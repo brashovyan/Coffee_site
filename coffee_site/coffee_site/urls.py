@@ -7,5 +7,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
     path('order/', views.order, name="order"),
-    path('success/<str:fullName>/<str:content>/<str:total>', views.success, name='success'),
+    path('aja/', views.aja, name='aja'),
 ]
